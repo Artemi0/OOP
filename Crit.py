@@ -51,14 +51,14 @@ class Critter:
               ", и сейчас я чувствую себя", self.mood)
         self.__pass_time()
 
-    def eat(self, food = 4):
+    def eat(self, food  ):
         print("Мррр...  Спасибо!")
         self.hunger -= food
         if self.hunger < 0:
             self.hunger = 0
         self.__pass_time()
 
-    def play(self, fun = 4):
+    def play(self, fun  ):
         print("Уиии!")
         self.boredom -= fun
         if self.boredom < 0:
@@ -94,11 +94,13 @@ def main():
         
         # кормление зверюшки
         elif choice == "2":
-            crit.eat()
+            x =int(input())
+            crit.eat(x)
          
         # игра со зверюшкой
         elif choice == "3":
-            crit.play()
+            y = int(input())
+            crit.play(y)
 
         # непонятный пользовательский ввод
         else:
