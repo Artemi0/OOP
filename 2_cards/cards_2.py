@@ -77,6 +77,7 @@ def main():
     print("Вот так она выглядит теперь: ")
     print(deck1)
 
+
     my_hand = Hand()
     your_hand = Hand()
     hands =[my_hand , your_hand]
@@ -93,4 +94,4 @@ def main():
     print("\nКолода очищена.")
     print("Вот так она виглядит теперь:", deck1)
 
-main()    
+main()   
