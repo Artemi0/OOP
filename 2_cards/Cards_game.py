@@ -79,9 +79,6 @@ def main()
     my_hand.clear()
     print(my_hand)
     print("\nА у меня на руках после сброса карт:")
-    deck.shuffle()
-    print("\nКолода перемешана.")
-    print("Вот так она выглядит теперь ")
-    print(deck1)
+    
 
 main()    
