@@ -40,11 +40,6 @@ class Hand:
         self.cards.remove(card)
         other_hand.add(card)
 
-class Deck(Hand):
-    """колода"""
-    def pupulate(self):
-        for siut in Card.SUITS
-
 def main()
     card1 = Card(rank = "Т", suit = Card.SUITS[0])
     print("Вывожу карту на экран:")
