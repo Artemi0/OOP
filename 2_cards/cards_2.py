@@ -5,7 +5,7 @@ class Card:
             "8", "9", "10", "В", "Д", "К"]
 
     #масти
-    SUITS = [u'\u2660', u'\u2663', u'\u2665', u'\2666']
+    SUITS = [u'\u2660', u'\u2663', u'\u2665', u'\u2666']
 
     def __init__(self, rank, suit):
         self.rank = rank
@@ -43,7 +43,7 @@ class Hand:
 class Deck(Hand):
     """колода"""
     def populate(self):
-        for siut in Card.SUITS:
+        for suit in Card.SUITS:
             for rank in Card.RANKS:
                 self.add(Card(rank, suit))
     
@@ -72,4 +72,25 @@ def main():
     print("Вот так теперь она выглядит:")
     print(deck1) 
 
-main()
+    deck1.shuffle()
+    print("\nКолода перемешана.")
+    print("Вот так она выглядит теперь: ")
+    print(deck1)
+
+    my_hand = Hand()
+    your_hand = Hand()
+    hands =[my_hand , your_hand]
+    deck1.deal(hands, per_hand = 5)
+    print("\nМне и вам на руки роздано по 5 кард.")
+    print("У меня на руках:")
+    print(my_hand)
+    print("У вас на руках:")
+    print(your_hand)
+    print("Осталось в колоде:")
+    print(deck1)
+
+    deck1.clear()
+    print("\nКолода очищена.")
+    print("Вот так она виглядит теперь:", deck1)
+
+main()    
